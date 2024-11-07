@@ -1,4 +1,4 @@
-import wx #vvv
+import wx 
 
 class IMCCalculator(wx.Frame):
     def __init__(self, parent, id, title):
@@ -16,15 +16,13 @@ class IMCCalculator(wx.Frame):
         hbox_name.Add(self.name_text_ctrl, proportion=1)
         vbox.Add(hbox_name, flag=wx.EXPAND | wx.LEFT | wx.RIGHT | wx.TOP, border=10)
 
-
         hbox_address = wx.BoxSizer(wx.HORIZONTAL)
         address_label = wx.StaticText(panel, label="Endereço Completo:")
         self.address_text_ctrl = wx.TextCtrl(panel)
         hbox_address.Add(address_label, flag=wx.RIGHT, border=8)
         hbox_address.Add(self.address_text_ctrl, proportion=1)
         vbox.Add(hbox_address, flag=wx.EXPAND | wx.LEFT | wx.RIGHT | wx.TOP, border=10)
-
-
+        
         hbox_ap = wx.BoxSizer(wx.HORIZONTAL)
         height_label = wx.StaticText(panel, label="Altura (cm)")
         self.height_text_ctrl = wx.TextCtrl(panel, size=(100, -1))
@@ -34,7 +32,6 @@ class IMCCalculator(wx.Frame):
         hbox_ap.Add(self.height_text_ctrl, flag=wx.RIGHT, border=10)
         hbox_ap.Add(weight_label, flag=wx.RIGHT | wx.TOP, border=8)
         hbox_ap.Add(self.weight_text_ctrl, flag=wx.RIGHT, border=10)
-
 
         self.result_text_ctrl = wx.TextCtrl(panel, style=wx.TE_MULTILINE | wx.TE_READONLY, size=(200, 80))
         hbox_ap.Add(self.result_text_ctrl, proportion=1, flag=wx.EXPAND | wx.LEFT, border=10)
