@@ -1,4 +1,4 @@
-import wx
+import wx #vvv
 
 class IMCCalculator(wx.Frame):
     def __init__(self, parent, id, title):
